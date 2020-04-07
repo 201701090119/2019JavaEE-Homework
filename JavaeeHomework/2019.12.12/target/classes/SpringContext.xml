@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="Helloworld" class="ex5.Message">
+        <property name="content">
+            <value>
+                Hello world!
+            </value>
+        </property>
+    </bean>
+    <bean id="Apple" class="ex6.fruit.impl.Apple"/>
+    <bean id="Person" class="ex6.person.Person">
+        <property name="fruit">
+            <ref bean="Apple"/>
+        </property>
+        <property name="name">
+            <value>miaoz</value>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.ex9.vo.Student" table="student" schema="test">
+        <id name="id" column="ID"/>
+        <property name="snumber" column="SNUMBER"/>
+        <property name="sname" column="SNAME"/>
+        <property name="sage" column="SAGE"/>
+        <set name="courses" table="stu_cour" cascade="all" lazy="true">
+            <key >
+                <column name="SID"/>
+            </key>
+            <many-to-many class="org.ex9.vo.Course" column="CID" />
+        </set>
+    </class>
+</hibernate-mapping>

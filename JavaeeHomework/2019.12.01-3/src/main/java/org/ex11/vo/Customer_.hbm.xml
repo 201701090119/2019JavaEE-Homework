@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.ex11.vo.Customer_" table="Customer" schema="test">
+        <id name="id" column="id"/>
+        <property name="account" column="account"/>
+        <property name="passwd" column="passwd"/>
+        <property name="truename" column="truename"/>
+        <property name="sex" column="sex"/>
+        <property name="age" column="age"/>
+        <property name="tel" column="tel"/>
+        <set name="address" inverse="false" cascade="all">
+            <key column="cust_id"/>
+            <one-to-many class="org.ex11.vo.Address_"/>
+        </set>
+    </class>
+</hibernate-mapping>

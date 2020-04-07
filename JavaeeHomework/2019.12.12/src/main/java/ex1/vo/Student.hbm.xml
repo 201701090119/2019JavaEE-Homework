@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="ex1.vo.Student" table="Student_" schema="test">
+        <id name="stuId" column="stuId"/>
+        <property name="stuNo" column="stuNo"/>
+        <property name="stuName" column="stuName"/>
+        <property name="stuGender" column="stuGender"/>
+        <property name="stuAge" column="stuAge"/>
+        <property name="stuClassId" column="stuClassID"/>
+    </class>
+    <sql-query name="getAllStudent" callable="true">
+        <return alias="s" class="ex1.vo.Student">
+            <return-property name="stuId" column="stuId"/>
+            <return-property  name="stuNo" column="stuNo"/>
+            <return-property  name="stuName" column="stuName"/>
+            <return-property  name="stuGender" column="stuGender"/>
+            <return-property  name="stuAge" column="stuAge"/>
+            <return-property  name="stuClassId" column="stuClassID"/>
+        </return>
+        {call demo_pro()}
+    </sql-query>
+</hibernate-mapping>

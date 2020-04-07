@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+      <property name="connection.url">jdbc:mariadb://106.54.23.221:3306/test</property>
+      <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
+      <property name="connection.username">root</property>
+      <property name="connection.password">miaoz1103</property>
+      <property name="show_sql">true</property>
+      <mapping resource="ex2/vo/StudentClass.hbm.xml"/>
+      <mapping class="ex2.vo.StudentClass"/>
+      <mapping resource="ex1/vo/Student.hbm.xml"/>
+      <mapping class="ex1.vo.Student"/>
+
+      <!-- DB schema will be updated if needed -->
+      <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

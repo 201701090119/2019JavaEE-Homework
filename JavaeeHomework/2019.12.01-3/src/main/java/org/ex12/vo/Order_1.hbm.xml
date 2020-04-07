@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.ex12.vo.Order_1" table="Order" schema="test">
+        <id name="oid" column="OID"/>
+        <property name="oDate" column="ODate"/>
+        <property name="oName" column="OName"/>
+        <property name="oPrice" column="OPrice"/>
+        <set name="products" table="pro_order" cascade="all" lazy="true">
+            <key >
+                <column name="OID"/>
+            </key>
+            <many-to-many class="org.ex9.vo.Student" column="PID" />
+        </set>
+    </class>
+</hibernate-mapping>

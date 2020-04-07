@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mariadb://106.54.23.221:3306/test</property>
+    <property name="connection.driver_class">org.mariadb.jdbc.Driver</property>
+<!--        <property name="connection.username">root</property>-->
+<!--    <property name="connection.password">miaoz1103</property>-->
+    <property name="show_sql">true</property>
+    <mapping class="org.ex1.vo.Xs"/>
+    <mapping resource="org/ex1/vo/Xs.hbm.xml"/>
+    <mapping class="org.ex2.vo.Xs_"/>
+    <mapping resource="org/ex2/vo/Xs.hbm.xml"/>
+    <mapping class="org.ex3.vo.Detail"/>
+    <mapping resource="org/ex3/vo/Detail.hbm.xml"/>
+    <mapping class="org.ex3.vo.Login"/>
+    <mapping resource="org/ex3/vo/Login.hbm.xml"/>
+    <mapping class="org.ex4.vo.Person"/>
+    <mapping resource="org/ex4/vo/Person.hbm.xml"/>
+    <mapping class="org.ex4.vo.Room"/>
+    <mapping resource="org/ex4/vo/Room.hbm.xml"/>
+    <mapping class="org.ex5.vo.Person_"/>
+    <mapping resource="org/ex5/vo/Person.hbm.xml"/>
+    <mapping class="org.ex5.vo.Room_"/>
+    <mapping resource="org/ex5/vo/Room.hbm.xml"/>
+    <mapping resource="org/ex6/vo/City.hbm.xml"/>
+    <mapping class="org.ex6.vo.City"/>
+    <mapping resource="org/ex6/vo/Mayor.hbm.xml"/>
+    <mapping class="org.ex6.vo.Mayor"/>
+    <mapping resource="org/ex7/vo/Product.hbm.xml"/>
+    <mapping class="org.ex7.vo.Product"/>
+    <mapping resource="org/ex7/vo/ProductType.hbm.xml"/>
+    <mapping class="org.ex7.vo.ProductType"/>
+    <mapping class="org.ex8.vo.Person_1"/>
+    <mapping resource="org/ex8/vo/Person_.hbm.xml"/>
+    <mapping class="org.ex8.vo.Room_1"/>
+    <mapping resource="org/ex8/vo/Room_.hbm.xml"/>
+    <mapping class="org.ex9.vo.Course"/>
+    <mapping resource="org/ex9/vo/Student.hbm.xml"/>
+    <mapping class="org.ex9.vo.Student"/>
+    <mapping class="org.ex11.vo.Address_"/>
+    <mapping resource="org/ex11/vo/Address_.hbm.xml"/>
+    <mapping class="org.ex11.vo.Customer_"/>
+    <mapping resource="org/ex11/vo/Customer_.hbm.xml"/>
+    <mapping class="org.ex12.vo.Order_1"/>
+    <mapping resource="org/ex12/vo/Order_1.hbm.xml"/>
+    <mapping class="org.ex12.vo.Product_1"/>
+    <mapping resource="org/ex12/vo/Product_1.hbm.xml"/>
+
+    <!--    <mapping class="org.vo.Bks"/>-->
+<!--    <mapping class="org.vo.Yjs"/>-->
+
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

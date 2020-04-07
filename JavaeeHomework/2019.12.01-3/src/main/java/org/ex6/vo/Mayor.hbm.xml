@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.ex6.vo.Mayor" table="Mayor" schema="test">
+        <id name="cid">
+            <column name="CID"/>
+            <generator class="foreign">
+                <param name="property">city</param>
+            </generator>
+        </id>
+        <property name="mName" column="MName"/>
+        <property name="mAge" column="MAge"/>
+        <property name="mGender" column="MGender"/>
+        <property name="mTel" column="MTel"/>
+        <one-to-one name="city" class="org.ex6.vo.City" constrained="true"/>
+    </class>
+</hibernate-mapping>
